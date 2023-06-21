@@ -1,0 +1,106 @@
+.registration__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 550px;
+  width: 100%;
+  .box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+
+    h1 {
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    p {
+      color: #767676;
+      line-height: 22.3px;
+      width: 349px;
+    }
+  }
+  .box_info {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex: 1;
+    p {
+      color: #000;
+      font-size: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    .info {
+      margin: 8px 0;
+    }
+      label {
+        color: #000;
+        font-size: 14px;
+        img {
+          width: 5px;
+          height: 5px;
+          padding-top: 6px;
+        }
+      }
+      input {
+        height: 32px;
+        width: 520px;
+        border: 1px solid #767676;
+        border-radius: 4px;
+        &:focus {
+          outline: none;
+          border-color: #337ab7;
+          box-shadow: 0 0 5px rgba(51, 122, 183, 0.5);
+        }
+        &:focus::placeholder {
+          color: transparent;
+        }
+      }
+      p {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #767676;
+        input {
+          width: 14px;
+          margin-right: 5px;
+          &:focus {
+              outline: none;
+              border-color: initial;
+              box-shadow: none;
+          }
+        }
+        span {
+          margin: 4px;
+          color: #337ab7;
+        }
+        img {
+          width: 5px;
+          height: 5px;
+          padding-top: 6px;
+        }
+
+      }
+      button {
+        font-size: 15px;
+        height: 50px;
+        width: 350px;
+        background-color: #337ab7;
+        color: #FFFFFF;
+        border-radius: 27px;
+        margin: 0 110px;
+      }
+      p {
+
+      }
+    }
+  }
+}
