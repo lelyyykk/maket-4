@@ -85,6 +85,8 @@ body {
   width: 100%;
   height: 80px;
   background-color: #FFFFFF;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .logo {
@@ -144,6 +146,10 @@ body {
     grid-template-columns: auto auto;
     align-content: center;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
   }
   .header .logo {
     display: flex;
@@ -180,32 +186,37 @@ body {
   .header .primary_nav .burger-menu.active .bar {
     background-color: #FFFFFF;
   }
-  .header .navigation__container {
+  .header .primary_nav {
+    position: relative;
+    z-index: 2;
+  }
+  .header .primary_nav .navigation__container {
     display: none;
     left: 0;
     width: 100%;
     z-index: 2;
-    position: fixed;
+    position: relative;
     top: 80px;
   }
-  .header .navigation__container ul {
+  .header .primary_nav .navigation__container ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
-  .header .navigation__container ul li {
+  .header .primary_nav .navigation__container ul li {
     display: none;
   }
-  .header .navigation__container.show {
+  .header .primary_nav .navigation__container.show {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: fixed;
     background-color: #FFFFFF;
   }
-  .header .navigation__container.show li {
+  .header .primary_nav .navigation__container.show li {
     display: block;
     color: #767676;
     margin: 15px;
@@ -216,7 +227,6 @@ body {
   flex-direction: row;
   align-items: center;
   background-color: #f7f7f7;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   height: 550px;
   width: 100%;
 }
@@ -300,7 +310,7 @@ body {
 .registration__container .box_info form p img {
   width: 5px;
   height: 5px;
-  padding-top: 6px;
+  padding: 6px 0 0 1px;
 }
 .registration__container .box_info form button {
   font-size: 15px;
@@ -310,5 +320,96 @@ body {
   color: #FFFFFF;
   border-radius: 27px;
   margin: 0 110px;
+}
+
+/*
+    ========================================
+    Media
+    ========================================
+*/
+@media screen and (max-width: 1024px) {
+  .registration__container {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    height: 900px;
+  }
+  .registration__container .box {
+    flex: 3;
+  }
+  .registration__container .box_info {
+    flex: 1;
+    justify-items: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 900px) {
+  .registration__container {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 711px) {
+  .registration__container .box_info form {
+    display: flex;
+    align-items: baseline;
+  }
+  .registration__container .box_info form input {
+    width: 290px;
+  }
+  .registration__container .box_info form button {
+    font-size: 15px;
+    height: 50px;
+    width: 270px;
+    background-color: #337ab7;
+    color: #FFFFFF;
+    border-radius: 27px;
+    margin: 0 110px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .registration__container {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    justify-content: center;
+    align-items: start;
+  }
+}
+@media screen and (max-width: 400px) {
+  .registration__container {
+    font-size: 13px;
+  }
+  .registration__container .box {
+    display: flex;
+    align-items: center;
+  }
+  .registration__container .box h1 {
+    font-size: 23px;
+    width: 300px;
+  }
+  .registration__container .box_info p {
+    flex-wrap: wrap;
+    width: 300px;
+  }
+  .registration__container .box_info p:first-child {
+    display: flex;
+    justify-content: center;
+  }
+  .registration__container .box_info p input span {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .registration__container .box h1 {
+    font-size: 20px;
+    width: 260px;
+  }
+  .registration__container .box p {
+    width: 300px;
+  }
+  .registration__container .box_info form input {
+    width: 250px;
+  }
+  .registration__container .box_info form input span {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
