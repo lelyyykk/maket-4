@@ -89,3 +89,34 @@ function validateForm() {
 
     return true; // Повертаємо true, якщо всі перевірки успішні
 }
+/*
+    ========================================
+    Slider
+    ========================================
+*/
+
+$(document).ready(function() {
+    $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        cssEase: 'linear',
+        responsive: [
+            {
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+});
