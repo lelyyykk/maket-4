@@ -1,11 +1,11 @@
-.registration__container {
+.registration {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #f7f7f7;
   height: 550px;
   width: 100%;
-  .box {
+  .box__container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -108,11 +108,11 @@
     ========================================
 */
 @media screen and (max-width: 1024px) {
-  .registration__container {
+  .registration {
     display: grid;
     grid-template-rows: 1fr 2fr;
     height: 900px;
-    .box {
+    .box__container {
       flex: 3;
     }
 
@@ -124,12 +124,12 @@
   }
 }
 @media screen and (max-width: 900px) {
-  .registration__container {
+  .registration {
     margin-top: 80px;
   }
 }
 @media screen and (max-width: 711px) {
-  .registration__container {
+  .registration {
     .box_info {
       form {
         display: flex;
@@ -152,7 +152,7 @@
   }
 }
 @media screen and (max-width: 460px) {
-  .registration__container {
+  .registration {
     display: grid;
     grid-template-rows: 1fr 3fr;
     justify-content: center;
@@ -160,9 +160,9 @@
   }
 }
 @media screen and (max-width: 400px) {
-  .registration__container {
+  .registration {
       font-size: 13px;
-    .box {
+    .box__container {
       display: flex;
       align-items: center;
       h1 {
@@ -190,8 +190,8 @@
   }
 }
 @media screen and (max-width: 350px) {
-  .registration__container {
-    .box {
+  .registration {
+    .box__container {
       h1 {
         font-size: 20px;
         width: 260px;

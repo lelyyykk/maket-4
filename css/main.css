@@ -70,6 +70,11 @@ input {
   padding: 0 15px;
 }
 
+/*.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 15px;
+}*/
 body {
   font-family: "PT Sans", sans-serif;
 }
@@ -222,7 +227,7 @@ body {
     margin: 15px;
   }
 }
-.registration__container {
+.registration {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -230,7 +235,7 @@ body {
   height: 550px;
   width: 100%;
 }
-.registration__container .box {
+.registration .box__container {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -238,82 +243,82 @@ body {
   flex-wrap: wrap;
   flex: 1;
 }
-.registration__container .box h1 {
+.registration .box__container h1 {
   font-size: 25px;
   font-weight: 400;
 }
-.registration__container .box p {
+.registration .box__container p {
   color: #767676;
   line-height: 22.3px;
   width: 349px;
 }
-.registration__container .box_info {
+.registration .box_info {
   display: flex;
   flex-direction: column;
   align-content: center;
   flex-wrap: nowrap;
   flex: 1;
 }
-.registration__container .box_info p {
+.registration .box_info p {
   color: #000;
   font-size: 20px;
   font-weight: 540;
 }
-.registration__container .box_info form {
+.registration .box_info form {
   display: flex;
   flex-direction: column;
 }
-.registration__container .box_info form .info {
+.registration .box_info form .info {
   margin: 8px 0;
 }
-.registration__container .box_info form label {
+.registration .box_info form label {
   color: #000;
   font-size: 14px;
 }
-.registration__container .box_info form label img {
+.registration .box_info form label img {
   width: 5px;
   height: 5px;
   padding-top: 6px;
 }
-.registration__container .box_info form input {
+.registration .box_info form input {
   height: 32px;
   width: 520px;
   border: 1px solid #767676;
   border-radius: 4px;
 }
-.registration__container .box_info form input:focus {
+.registration .box_info form input:focus {
   outline: none;
   border-color: #337ab7;
   box-shadow: 0 0 5px rgba(51, 122, 183, 0.5);
 }
-.registration__container .box_info form input:focus::placeholder {
+.registration .box_info form input:focus::placeholder {
   color: transparent;
 }
-.registration__container .box_info form p {
+.registration .box_info form p {
   display: flex;
   align-items: center;
   font-size: 14px;
   color: #767676;
 }
-.registration__container .box_info form p input {
+.registration .box_info form p input {
   width: 14px;
   margin-right: 5px;
 }
-.registration__container .box_info form p input:focus {
+.registration .box_info form p input:focus {
   outline: none;
   border-color: initial;
   box-shadow: none;
 }
-.registration__container .box_info form p span {
+.registration .box_info form p span {
   margin: 4px;
   color: #337ab7;
 }
-.registration__container .box_info form p img {
+.registration .box_info form p img {
   width: 5px;
   height: 5px;
   padding: 6px 0 0 1px;
 }
-.registration__container .box_info form button {
+.registration .box_info form button {
   font-size: 15px;
   height: 50px;
   width: 350px;
@@ -329,34 +334,34 @@ body {
     ========================================
 */
 @media screen and (max-width: 1024px) {
-  .registration__container {
+  .registration {
     display: grid;
     grid-template-rows: 1fr 2fr;
     height: 900px;
   }
-  .registration__container .box {
+  .registration .box__container {
     flex: 3;
   }
-  .registration__container .box_info {
+  .registration .box_info {
     flex: 1;
     justify-items: center;
     align-items: center;
   }
 }
 @media screen and (max-width: 900px) {
-  .registration__container {
+  .registration {
     margin-top: 80px;
   }
 }
 @media screen and (max-width: 711px) {
-  .registration__container .box_info form {
+  .registration .box_info form {
     display: flex;
     align-items: baseline;
   }
-  .registration__container .box_info form input {
+  .registration .box_info form input {
     width: 290px;
   }
-  .registration__container .box_info form button {
+  .registration .box_info form button {
     font-size: 15px;
     height: 50px;
     width: 270px;
@@ -367,7 +372,7 @@ body {
   }
 }
 @media screen and (max-width: 460px) {
-  .registration__container {
+  .registration {
     display: grid;
     grid-template-rows: 1fr 3fr;
     justify-content: center;
@@ -375,41 +380,41 @@ body {
   }
 }
 @media screen and (max-width: 400px) {
-  .registration__container {
+  .registration {
     font-size: 13px;
   }
-  .registration__container .box {
+  .registration .box__container {
     display: flex;
     align-items: center;
   }
-  .registration__container .box h1 {
+  .registration .box__container h1 {
     font-size: 23px;
     width: 300px;
   }
-  .registration__container .box_info p {
+  .registration .box_info p {
     flex-wrap: wrap;
     width: 300px;
   }
-  .registration__container .box_info p:first-child {
+  .registration .box_info p:first-child {
     display: flex;
     justify-content: center;
   }
-  .registration__container .box_info p input span {
+  .registration .box_info p input span {
     margin: 0;
   }
 }
 @media screen and (max-width: 350px) {
-  .registration__container .box h1 {
+  .registration .box__container h1 {
     font-size: 20px;
     width: 260px;
   }
-  .registration__container .box p {
+  .registration .box__container p {
     width: 300px;
   }
-  .registration__container .box_info form input {
+  .registration .box_info form input {
     width: 250px;
   }
-  .registration__container .box_info form input span {
+  .registration .box_info form input span {
     margin: 0;
   }
 }
@@ -494,6 +499,7 @@ body {
 }
 .course__container .slider .slick-track {
   display: flex;
+  width: 300px;
   min-width: 0;
   opacity: 0;
 }
@@ -545,6 +551,9 @@ body {
     display: block;
     position: relative;
   }
+  .slider .about p {
+    width: 218px;
+  }
   .slider .slick-arrow {
     position: absolute;
     top: 50%;
@@ -564,8 +573,14 @@ body {
     font-size: 0;
     width: 7px;
     height: 7px;
-    background-color: #000;
+    background-color: #b3b3b3;
+    color: #b3b3b3;
     border-radius: 50%;
+  }
+  .slider .slick-dots button #slick-slide-control00,
+  .slider .slick-dots button #slick-slide-control01,
+  .slider .slick-dots button #slick-slide-control02 {
+    background-color: #b3b3b3;
   }
   .slider .slick-list {
     overflow: hidden;
@@ -574,6 +589,69 @@ body {
     display: flex;
     min-width: 0;
     opacity: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .course__container h2 {
+    font-size: 25px;
+  }
+}
+.statistics__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498db;
+  height: 269px;
+}
+.statistics__container .for_statistics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 50px;
+}
+.statistics__container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.statistics__container .box img {
+  width: 80px;
+  height: 60px;
+}
+.statistics__container .box h4 {
+  font-weight: lighter;
+  font-size: 30px;
+  color: #FFF;
+  margin: 18px 0 0 0;
+}
+.statistics__container .box p {
+  text-align: center;
+  color: #FFF;
+}
+
+/*
+       ========================================
+       Media
+       ========================================
+   */
+@media screen and (max-width: 730px) {
+  .statistics__container {
+    display: flex;
+    height: 315px;
+  }
+  .statistics__container .for_statistics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .statistics__container .box {
+    display: flex;
+    margin: 2px 20px;
+  }
+  .statistics__container .box h4 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .statistics__container .box p {
+    font-size: 13px;
   }
 }
 /*# sourceMappingURL=main.css.map */

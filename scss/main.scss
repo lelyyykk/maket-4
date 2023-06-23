@@ -56,11 +56,16 @@ input {
   Condition
   ========================================
 */
-[class ="__container"] {
+[class =__container] {
   max-width: 1250px;
   margin: 0 auto;
   padding: 0 15px;
 }
+/*.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 15px;
+}*/
 body {
   font-family: 'PT Sans', sans-serif;
 }
@@ -72,3 +77,4 @@ body {
 @import "header";
 @import "registration";
 @import "course";
+@import "statistics";
