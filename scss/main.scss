@@ -56,16 +56,16 @@ input {
   Condition
   ========================================
 */
-[class =__container] {
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-/*.container {
+/*[class =__container] {
   max-width: 1250px;
   margin: 0 auto;
   padding: 0 15px;
 }*/
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 body {
   font-family: 'PT Sans', sans-serif;
 }
@@ -80,3 +80,4 @@ body {
 @import "statistics";
 @import "reviews";
 @import "video";
+@import "mentors";
