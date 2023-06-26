@@ -91,12 +91,12 @@ function validateForm() {
 }
 /*
     ========================================
-    Slider
+    Slider for course
     ========================================
 */
 
 $(document).ready(function() {
-    $('.slider').slick({
+    $('.slider_course').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
@@ -118,5 +118,22 @@ $(document).ready(function() {
                 }
             }
         ]
+    });
+});
+
+/*
+    ========================================
+    Slider for reviews
+    ========================================
+*/
+$(document).ready(function() {
+    $('.reviews_slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        cssEase: 'linear',
     });
 });
