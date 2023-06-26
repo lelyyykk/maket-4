@@ -1,0 +1,101 @@
+.reviews__container {
+  h2 {
+    display: flex;
+    justify-content: center;
+    font-weight: 540;
+    font-size: 30px;
+  }
+  .reviews_slider {
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 330px;
+      width: 100%;
+      .slick-initialized .slick-slide {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .slick-slide {
+        img {
+          display: inline !important;
+          width: 25px;
+          height: 25px;
+          margin: 0;
+
+          &.left {
+            /*margin-right: 100px;*/
+            margin: 0;
+          }
+
+          &.right {
+            /*
+            margin-left: 600px;
+            */
+            margin: 0;
+          }
+        }
+      }
+      p {
+        display: block;
+        width: 600px;
+        color: #767676;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 2;
+
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          color: #000000;
+          margin: 3px;
+        }
+        span {
+          color: #767676;
+          font-style: italic;
+          text-align: center;
+        }
+      }
+    }
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      font-size: 0;
+      display: none !important;
+
+    }
+    .slick-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li {
+        list-style: none;
+      }
+      button {
+        width: 7px;
+        height: 7px;
+        background-color: #b3b3b3;
+        border-radius: 50%;
+        font-size: 0;
+        border: none;
+        margin: 10px;
+        &:active {
+          background-color: #767676;
+        }
+      }
+    }
+    .slick-list {
+    }
+    .slick-track {
+      display: flex;
+      min-width: 0;
+      opacity: 0;
+    }
+  }
+}

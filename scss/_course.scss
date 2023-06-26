@@ -9,9 +9,7 @@
     font-weight: 540;
     font-size: 30px;
   }
-  .slider {
-    display: block;
-    position: relative;
+  .slider_course {
     .about {
       display: flex;
       flex-direction: column;
@@ -56,12 +54,6 @@
         width: 292px;
       }
     }
-    .slick-arrow {
-      position: absolute;
-      top: 50%;
-      z-index: 10;
-      font-size: 0;
-    }
     .slick-dots {
       display: flex;
       align-items: center;
@@ -71,26 +63,7 @@
     }
       button {
         font-size: 0;
-      }
-    }
-    .slick-list {
-      overflow: hidden;
-    }
-    .slick-track {
-      display: flex;
-      width: 300px;
-      min-width: 0;
-      opacity: 0;
-    }
-    div {
-      #slick-slide00,
-      #slick-slide01,
-      #slick-slide02 {
-        .about {
-          .slick-slide {
-            display: flex;
-          }
-        }
+        border: none;
       }
     }
   }
@@ -152,11 +125,9 @@
       top: 50%;
       z-index: 10;
       font-size: 0;
+      display: none !important;
     }
     .slick-dots {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       li {
         list-style-type: none;
         margin: 0 7px;
@@ -166,12 +137,9 @@
         width: 7px;
         height: 7px;
         background-color: #b3b3b3;
-        color: #b3b3b3;
         border-radius: 50%;
-       #slick-slide-control00,
-       #slick-slide-control01,
-       #slick-slide-control02 {
-         background-color: #b3b3b3;
+        &:active {
+          background-color: #767676;
         }
       }
     }
