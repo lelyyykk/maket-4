@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   background-color: #f7f7f7;
-  height: 550px;
+  height: 671px;
   width: 100%;
   .box__container {
     display: flex;
@@ -51,8 +51,8 @@
         }
       }
       input {
-        height: 32px;
-        width: 520px;
+        height: 51px;
+        width: 563px;
         border: 1px solid #767676;
         border-radius: 4px;
         &:focus {
@@ -76,6 +76,9 @@
               outline: none;
               border-color: initial;
               box-shadow: none;
+          }
+          &placeholder {
+           font-size: 14px;
           }
         }
         span {
