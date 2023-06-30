@@ -1,18 +1,19 @@
-  .cta {
+@import "variables";
+.cta__container {
     height: 200px;
-    background-color: #3498db;
+    background-color: $blue-color;
     margin-top: -5px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    .for_cta {
+    .cta__block {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       margin: 0 50px;
 
-      .items {
+      .cta__items {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -24,8 +25,8 @@
             margin: 10px;
 
             &.tel {
-              width: 53px;
-              height: 59px;
+              width: 47px;
+              height: 47px;
             }
 
             &.email {
@@ -34,8 +35,8 @@
             }
 
             &.location {
-              width: 40px;
-              height: 54px;
+              width: 43px;
+              height: 51px;
             }
 
             &.facebook {
@@ -50,12 +51,13 @@
           margin: 5px 0;
           font-size: 15px;
         }
-
-        p {
-          color: #ffffff;
-          margin: 0;
-          font-size: 13px;
-          text-align: center;
+    a {
+          p {
+            color: #ffffff;
+            margin: 0;
+            font-size: 13px;
+            text-align: center;
+          }
         }
       }
     }
@@ -65,16 +67,48 @@
        Media
        ========================================
 */
-  @media screen and (max-width: 730px) {
-    .cta {
-      height: auto;
-      .for_cta {
+  @media screen and (max-width: 815px) {
+    .cta__container {
+      height: 273px;
+      .cta__block {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 0 50px;
-        .items {
-          margin: 30px 20px 0;
+        .cta__items {
+          margin: 0 20px 10px 0;
         }
       }
     }
   }
+  @media screen and (max-width: 463px) {
+    .cta__container {
+      height: 300px;
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 419px) {
+    .cta__container {
+      height: 330px;
+      .cta__block {
+        margin: 0 auto;
+        padding: 0;
+        grid-template-columns: 10.8em 1fr;
+        .cta__items {
+          margin: 5px 1px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 351px) {
+    .cta__container {
+      .cta__block {
+        grid-template-columns: 9.8em 1fr;
+        .cta__items {
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+

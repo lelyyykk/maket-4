@@ -35,6 +35,10 @@ button,
 input {
   font-weight: inherit;
   color: inherit;
+  border:none;
+}
+button {
+  font-size: 0;
 }
 .wrapper {
   min-height: 100%;

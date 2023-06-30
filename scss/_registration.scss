@@ -1,74 +1,86 @@
-.registration {
+@import "variables";
+.registration__container {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #f7f7f7;
   height: 671px;
   width: 100%;
-  .box__container {
+  .registration__box {
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-content: center;
+    align-content: flex-end;
     flex-wrap: wrap;
+    align-items: center;
     flex: 1;
+    margin: 14px auto;
 
     h1 {
-      font-size: 25px;
+      font-size: 37px;
       font-weight: 400;
     }
 
     p {
-      color: #767676;
-      line-height: 22.3px;
-      width: 349px;
+      color: $text-color;
+      line-height: 30.3px;
+      width: 521px;
+      font-size: 18px;
+      letter-spacing: 1px;
     }
   }
-  .box_info {
+  .registration__info {
     display: flex;
     flex-direction: column;
     align-content: center;
     flex-wrap: nowrap;
     flex: 1;
-    p {
+    h2 {
       color: #000;
-      font-size: 20px;
-      font-weight: 540;
+      font-size: 24px;
+      font-weight: 530;
     }
     form {
       display: flex;
       flex-direction: column;
-    .info {
-      margin: 8px 0;
-    }
+      .registration__label {
+        margin: 8px 0;
+      }
       label {
         color: #000;
         font-size: 14px;
+
         img {
           width: 5px;
           height: 5px;
-          padding-top: 6px;
+          padding: 4px;
         }
       }
       input {
         height: 51px;
-        width: 563px;
-        border: 1px solid #767676;
+        width: 577px;
+        border: 1px solid $text-color;
         border-radius: 4px;
+        &::placeholder {
+          font-size: 14px;
+          padding-left: 10px;
+          padding-top: 5px;
+        }
         &:focus {
           outline: none;
-          border-color: #337ab7;
+          border-color: $blue-color;
           box-shadow: 0 0 5px rgba(51, 122, 183, 0.5);
         }
         &:focus::placeholder {
           color: transparent;
+
         }
       }
       p {
         display: flex;
         align-items: center;
-        font-size: 14px;
-        color: #767676;
+        font-size: 16px;
+        flex-wrap: wrap;
         input {
           width: 14px;
           margin-right: 5px;
@@ -77,29 +89,29 @@
               border-color: initial;
               box-shadow: none;
           }
-          &placeholder {
-           font-size: 14px;
-          }
         }
         span {
+          color: $text-color;
+        }
+        a {
           margin: 4px;
-          color: #337ab7;
+          color: $blue-color;
         }
         img {
           width: 5px;
           height: 5px;
-          padding: 6px 0 0 1px;
+          padding: 4px;
         }
-
       }
       button {
-        font-size: 15px;
+        font-size: 13px;
         height: 50px;
-        width: 350px;
-        background-color: #337ab7;
+        width: 363px;
+        background-color: $blue-color;
         color: #FFFFFF;
         border-radius: 27px;
         margin: 0 110px;
+        border: none;
       }
     }
   }
@@ -110,42 +122,52 @@
     Media
     ========================================
 */
-@media screen and (max-width: 1024px) {
-  .registration {
+@media screen and (max-width: 1284px) {
+  .registration__container {
     display: grid;
-    grid-template-rows: 1fr 2fr;
-    height: 900px;
-    .box__container {
+    grid-template-rows: 1fr;
+    height: auto;
+    justify-content: center;
+    .registration__box {
+      display: flex;
       flex: 3;
+      align-content: center;
     }
-
-    .box_info {
+    .registration__info {
+      display: flex;
       flex: 1;
-     justify-items: center;
+      justify-items: center;
       align-items: center;
+      form {
+        button {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 }
 @media screen and (max-width: 900px) {
-  .registration {
+  .registration__container {
     margin-top: 80px;
+    .registration__info {
+      button {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 @media screen and (max-width: 711px) {
-  .registration {
-    .box_info {
+  .registration__container {
+    .registration__info {
       form {
-        display: flex;
-        align-items: baseline;
-
         input {
-          width: 290px;
+          width: 507px;
         }
         button {
           font-size: 15px;
           height: 50px;
           width: 270px;
-          background-color: #337ab7;
+          background-color: $blue-color;
           color: #FFFFFF;
           border-radius: 27px;
           margin: 0 110px;
@@ -154,62 +176,153 @@
     }
   }
 }
-@media screen and (max-width: 460px) {
-  .registration {
-    display: grid;
-    grid-template-rows: 1fr 3fr;
-    justify-content: center;
-    align-items: start;
-  }
-}
-@media screen and (max-width: 400px) {
-  .registration {
-      font-size: 13px;
-    .box__container {
-      display: flex;
-      align-items: center;
-      h1 {
-        font-size: 23px;
-        width: 300px;
+@media screen and (max-width: 700px) {
+  .registration__container {
+    .registration__info {
+      form {
+        button {
+          margin-bottom: 20px;
+        }
       }
     }
-    .box_info {
+  }
+}
+@media screen and (max-width: 550px) {
+  .registration__container {
+    .registration__box {
+      h1 {
+        font-size: 37px;
+        font-weight: 400;
+      }
       p {
-        flex-wrap: wrap;
-        width: 300px;
-        &:first-child {
-          display: flex;
-          justify-content:  center;
+        line-height: 30.3px;
+        width: 397px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .registration__container {
+    .registration__info {
+      form {
+        display: flex;
+        input {
+          width: 475px;
+          height: 41px;
         }
+      }
+    }
+  }
+}
 
-        input{
-
-          span{
-            margin: 0;
+@media screen and (max-width: 496px) {
+  .registration__container {
+    .registration__info {
+      form {
+        width: 78%;
+        input {
+          align-self: center;
+          width: 371px;
+          height: 41px;
+        }
+        button {
+          align-self: center;
+          height: 43px;
+          width: 242px;
+          margin-bottom: 20px;
+        }
+        p {
+          input {
+            margin: 15px 3px 0 2px;
+          }
+          a {
+            margin-left: 25px;
+            margin-top: -10px;
+          }
+          span {
+            margin-left: 6px;
           }
         }
       }
     }
   }
 }
-@media screen and (max-width: 350px) {
-  .registration {
-    .box__container {
+@media screen and (max-width: 436px) {
+  .registration__container {
+    .registration__box {
       h1 {
-        font-size: 20px;
-        width: 260px;
+        font-size: 25px;
+        text-align: center;
       }
       p {
-        width: 300px;
+        font-size: 16px;
+        width: 297px;
       }
     }
-    .box_info {
+    .registration__info {
+      h2 {
+       font-size: 22px;
+      }
       form {
         input {
-          width: 250px;
+          width: 364px;
+          align-self: inherit;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 426px) {
+  .registration__container {
+    .registration__info {
+      form {
+        margin-left: 0;
+      }
+      h2 {
+        margin: 10px auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 409px) {
+  .registration__container {
+      .registration__box {
+        align-items: center;
+        width: 356px;
+      h1 {
+        font-size: 25px;
+        text-align: center;
+      }
+      p {
+        font-size: 16px;
+        width: 297px;
+      }
+    }
+    .registration__info {
+      width: 356px;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
 
+      form {
+        align-self: baseline;
+        input {
+          width: 294px;
+          align-self: inherit;
+          p {
+            font-size: 13px;
+          }
+        }
+        p {
+          input {
+            margin: 15px 3px 0 2px;
+          }
+            a {
+          margin-left: 25px;
+          margin-top: -10px;
+          }
           span {
-            margin: 0;
+            margin-left: 6px;
           }
         }
       }

@@ -1,69 +1,44 @@
-.mentors {
-  height: 545px;
-  .mentors__container {
+@import "_mixin", "variables";
+.mentors__container {
+  height: 612px;
 
+  .mentors__block {
     h2 {
       padding-top: 40px;
       text-align: center;
       font-weight: 540;
-      font-size: 30px;
+      font-size: 34px;
     }
     .slider__mentors {
-      .photo {
+      .slider__item {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
         align-items: center;
+
         img {
           display: flex;
         }
-        .text {
+
+        .slider__item-text {
           span {
             display: block;
             padding-top: 15px;
             padding-bottom: 14px;
-            border-bottom: 1px solid #767676;
-            color: #337ab7;
+            border-bottom: 1px solid #d0d0d0;
+            color: $blue-color;
             font-size: 17px;
           }
+
           p {
             text-align: inherit;
-            color: #767676;
+            color: #c9c9c9;
             font-size: 16px;
           }
         }
       }
-      .slick-arrow {
-        position: absolute;
-        top: 50%;
-        z-index: 10;
-        font-size: 0;
-        display: none !important;
-      }
-      .slick-dots {
-          display: flex;
-          justify-content: center;
-        li {
-          list-style: none;
-        }
-        button {
-          width: 7px;
-          height: 7px;
-          background-color: #b3b3b3;
-          border-radius: 50%;
-          font-size: 0;
-          border: none;
-          margin: 10px;
-          &:active {
-            background-color: #767676;
-          }
-        }
-      }
-      .slick-track {
-        display: flex;
-        min-width: 0;
-        opacity: 0;
-      }
+
+      @include details_slider;
     }
   }
 }
@@ -73,21 +48,21 @@
     ========================================
 */
 @media screen and (max-width: 1230px) {
-  .mentors {
+  .mentors__container {
     height: auto;
   }
 }
 @media screen and (max-width: 890px) {
-  .mentors {
-    .mentors__container {
+  .mentors__container {
+    .mentors__block {
       .slider__mentors {
-        .photo {
+        .slider__item {
           display: flex;
           flex-direction: column;
           img {
             max-width: 150px;
           }
-          .text {
+          .slider__item-text {
 
             span {
               text-align: center;

@@ -1,3 +1,4 @@
+@import "variables";
 .header {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -7,7 +8,7 @@
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-  .logo {
+  .header__logo {
     display: flex;
     justify-content: center;
     align-self: center;
@@ -16,17 +17,17 @@
       height: 79px;
     }
   }
-  .primary_nav {
+  .header__nav {
     display: flex;
 
-    .burger-menu {
+    .header__burger-menu {
       background: none;
       border: none;
       outline: none;
       cursor: pointer;
     }
 
-    .navigation__container {
+    .header__nav-block {
       display: flex;
       align-items: center;
 
@@ -35,13 +36,13 @@
         text-align: center;
         li {
           margin: 0 15px;
-          color: #767676;
+          color: $text-color;
           a {
             font-size: 15px;
           }
           &:last-child a {
             transform: translate(-50%, -50%);
-            background-color: #337ab7;
+            background-color: $blue-color;
             color: #FFFFFF;
             padding: 12px 16px;
             border-radius: 27px;
@@ -50,13 +51,11 @@
       }
     }
   }
-
-
-    /*
-        ========================================
-        Media
-        ========================================
-    */
+/*
+  ========================================
+  Media
+  ========================================
+*/
 @media  screen and (max-width: 1680px) {
   .header {
     display: grid;
@@ -75,7 +74,7 @@
     left: 0;
     height: 80px;
 
-    .logo {
+    .header__logo {
       display: flex;
       position: relative;
       img {
@@ -84,18 +83,18 @@
       }
     }
 
-    .primary_nav {
+    .header__nav {
       position: relative;
       z-index: 2;
       width: 100%;
 
-      .burger-menu {
+      .header__burger-menu {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        background-color: #337ab7;
+        background-color: $blue-color;
         width: 44px;
         height: 32px;
         z-index: 3;
@@ -106,12 +105,12 @@
           width: 22px;
           height: 2px;
           background-color: #FFFFFF;
-          margin: 0.2em 0;
+          margin: 2px 0;
           transition: all 0.3s ease;
         }
 
-        &.active {
-          background-color: #337ab7;
+        &:active {
+          background-color: $blue-color;
 
           .bar {
             background-color: #FFFFFF;
@@ -120,10 +119,10 @@
       }
     }
 
-    .primary_nav {
+    .header__nav {
       position: relative;
       z-index: 2;
-      .navigation__container {
+      .header__nav-block {
         display: none;
         left: 0;
         width: 100%;
@@ -155,7 +154,7 @@
 
           li {
             display: block;
-            color: #767676;
+            color: $text-color;
             margin: 15px;
             a {
               font-size: 15px;

@@ -11,30 +11,30 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="logo container">
+            <div class="header__logo container">
                 <img src="img/logo_Oxit.png" alt="logo">
             </div>
-            <section class="primary_nav  container">
-                <button class="burger-menu">
+            <section class="header__nav  container">
+                <button class="header__burger-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
-                <nav class="navigation__container">
-                    <ul class="menu">
+                <nav class="header__nav-block">
+                    <ul>
                         <li><a href="#" title="головна">Головна</a></li>
-                        <li><a href="#" title="програма курсу">Програма курсу</a></li>
-                        <li><a href="#" title="відгуки про нас">Відгуки про нас</a></li>
-                        <li><a href="#" title="відео">Відео</a></li>
-                        <li><a href="#" title="ментори">Ментори</a></li>
+                        <li><a href="#course" title="програма курсу">Програма курсу</a></li>
+                        <li><a href="#reviews" title="відгуки про нас">Відгуки про нас</a></li>
+                        <li><a href="#video" title="відео">Відео</a></li>
+                        <li><a href="#mentors" title="ментори">Ментори</a></li>
                         <li><a href="#" title="подати заявку"><span>Подати заявку</span></a></li>
                     </ul>
                 </nav>
             </section>
         </header>
         <main class="page">
-            <section class="registration">
-                <div class="box__container">
+            <section class="registration__container">
+                <div class="registration__box container">
                     <h1>Курси програмування у Луцьку</h1>
                     <p>Сфера IТ розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що пов`язана з IТ. Існує лише одна проблема - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університети ми отримуємо
                         Мало практики i "живих", реальних кейсів. ІТ школа ОхІТ створила таку методику навчання, при якій за короткий
@@ -42,48 +42,48 @@
                         програмування в Луцьку. Старт наступного курсу 3 серпня.
                     </p>
                 </div>
-                <div class="box_info">
-                    <p>Зареєструватися на курси</p>
+                <div class="registration__info container">
+                    <h2>Зареєструватися на курси</h2>
                     <form action="#" method="get" enctype="multipart/form-data">
-                        <label class="info">Ім'я<img src="icons/required.png" alt="required"></label>
+                        <label class="registration__label">Ім'я<img src="icons/required.png" alt="required"></label>
                         <input type="text" name="name" title="" placeholder="Ім'я" required/>
 
-                        <label class="info">Прізвище<img src="icons/required.png" alt="required"></label>
+                        <label class="registration__label">Прізвище<img src="icons/required.png" alt="required"></label>
                         <input type="text" name="surname" title="" placeholder="Прізвище" required/>
 
-                        <label class="info">Мене більше цікавить<img src="icons/required.png" alt="required"></label>
+                        <label class="registration__label">Мене більше цікавить<img src="icons/required.png" alt="required"></label>
                         <input type="text" name="interest" title="" placeholder="developer or QA" required/>
 
-                        <label class="info">Телефон<img src="icons/required.png" alt="required"></label>
+                        <label class="registration__label">Телефон<img src="icons/required.png" alt="required"></label>
                         <input type="tel" name="phone" title="" placeholder="Номер телефону: +380 XX XXX XX XX" required/>
 
-                        <label class="info">Email<img src="icons/required.png" alt="required"></label>
+                        <label class="registration__label">Email<img src="icons/required.png" alt="required"></label>
                         <input type="email" name="email" title="" placeholder="Email" required/>
 
-                        <p><input type="checkbox" name="car" value="yes">Я погоджуюсь із <span>Політикою Конфіденційності <img src="icons/required.png" alt="required"></span></p>
+                        <p><input type="checkbox" name="car" value="yes"><span>Я погоджуюсь із</span><a>Політикою Конфіденційності <img src="icons/required.png" alt="required"></a></p>
 
                         <button type="submit" class="submit">ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
                     </form>
                 </div>
             </section>
-            <section class="course__container">
+            <section class="course__container container" id="course">
                 <h2>Курс "Розробка сайтів"</h2>
-                <div class="slider slider_course">
-                    <div class="about">
+                <div class="slider slider-course">
+                    <div class="slider__item">
                         <img src="icons/course-icon-1.png" alt="course">
                         <h3>Розробка сайтів на WordPress</h3>
                         <p>Курс складається з коротких навчальних відео, на яких ти пізнаєш основи WordPress, навчишся створювати сайти різної складності: від блогів до інтернет магазинів.
                             Всі знання закріпиш за допомогою тестових завдань.
                         </p>
                     </div>
-                    <div class="about">
+                    <div class="slider__item">
                         <img src="icons/course-icon-2.png" alt="course">
                         <h3>Розробка сайтів на Drupal 8</h3>
                         <p>Для створення чудових сайтів на Drupal 8, цеглинка за цеглинко, ти пізнаєш секрети основних та додаткових Drupal-модулів
                             (Views, Rules, Panels, Devel, Paragraph тa багатьох інших).
                         </p>
                     </div>
-                    <div class="about">
+                    <div class="slider__item">
                         <img src="icons/course-icon-3.png" alt="course">
                         <h3>Ознайомлення з тестуванням</h3>
                         <p>
@@ -93,33 +93,33 @@
                 </div>
             </section>
             <section class="statistics__container">
-                <div class="for_statistics">
-                    <div class="box">
+                <div class="statistics__block container">
+                    <div class="statistics__icon">
                         <img src="icons/statistic-icon-1.png" alt="statistic">
                         <h4>25</h4>
                         <p>курсів організовано</p>
                     </div>
-                    <div class="box">
+                    <div class="statistics__icon">
                         <img src="icons/statistic-icon-2.png" alt="statistic">
                         <h4>836</h4>
                         <p>годин занять проведено</p>
                     </div>
-                    <div class="box">
+                    <div class="statistics__icon">
                         <img src="icons/statistic-icon-3.png" alt="statistic">
                         <h4>500</h4>
                         <p>студентів навчено</p>
                     </div>
-                    <div class="box">
+                    <div class="statistics__icon">
                         <img src="icons/statistic-icon-4.png" alt="statistic">
                         <h4>120</h4>
                         <p>випускників курсів працевлаштовано</p>
                     </div>
                 </div>
             </section>
-            <section class="reviews__container">
+            <section class="reviews__container container" id="reviews">
                 <h2>Що кажуть студенти наших курсів:</h2>
                 <div class="slider reviews_slider">
-                    <div class="reviews">
+                    <div class="reviews__block">
                         <p>
                             <span>
                                 <img src="img/left_double.png" class="left" alt="marks">
@@ -135,10 +135,10 @@
                             <span>Drupal-developer</span>
                         </div>
                     </div>
-                    <div class="reviews">
+                    <div class="reviews__block">
                         <p>
                             <span>
-                                <img src="img/left_double.png" class="left" alt="marks">
+                                <img src="img/left_double.png"  class="left" alt="marks">
                             </span>
                             Під час проходження курсів Drupal у школі ОхIТ, я навчився створювати не досить складні сайти та знайшов справу, якою хочу займатись. Після успішного завершення курсів мені надали можливість продовжити навчання вже в якості Intern Site Builder.
                             Зараз я можу сказати, що Drupal та OxIT повністю змінили моє життя.
@@ -151,10 +151,10 @@
                             <span>Drupal-developer</span>
                         </div>
                     </div>
-                    <div class="reviews">
+                    <div class="reviews__block">
                         <p>
                             <span>
-                                <img src="img/left_double.png" class="left" alt="marks">
+                                <img src="img/left_double.png"  class="left" alt="marks">
                             </span>
                             Під час проходження курсів Drupal у школі ОхIТ, я навчився створювати не досить складні сайти та знайшов справу, якою хочу займатись. Після успішного завершення курсів мені надали можливість продовжити навчання вже в якості Intern Site Builder.
                             Зараз я можу сказати, що Drupal та OxIT повністю змінили моє життя.
@@ -169,24 +169,24 @@
                     </div>
                 </div>
             </section>
-            <section class="video_box ">
-                <div class="text__container container">
+            <section class="video__container" id="video">
+                <div class="video__description container">
                     <h2>Відео</h2>
                     <p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів Letraset, які містили уривки з Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп'ютерного верстування на кшталт Aldus Pagemaker, які використовували різні версії Lorem Ipsum.</p>
                 </div>
-                <div class="video__container container">
-                    <div class="video">
+                <div class="video__block container">
+                    <div class="video__player">
                         <iframe src="https://www.youtube.com/embed/JLHvS0qR5Lw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </section>
-            <section class="mentors">
-                <div class="mentors__container container">
+            <section class="mentors__container" id="mentors">
+                <div class="mentors__block container">
                     <h2>Наші ментори</h2>
                     <div class="slider slider__mentors">
-                        <div class="photo">
+                        <div class="slider__item">
                             <img src="img/viktor.png" alt="mentor">
-                            <div class="text">
+                            <div class="slider__item-text">
                                 <span><strong>Віктор</strong></span>
                                 <p>Майбутнім управлінцям неабияк пощастило - адже з ними ділитиметься досвідом управлінець із величезним досвідом! Сам засновник і СЕО компанії InternetDevels, Віктор
                                     Левандовський, висловив бажання бути викладачем на курсах проект-менеджменту.</p>
@@ -197,9 +197,9 @@
                                     пропустите? Записуйтесь уже зараз!</p>
                             </div>
                         </div>
-                        <div class="photo">
+                        <div class="slider__item">
                             <img src="img/mark.png" alt="mentor">
-                            <div class="text">
+                            <div class="slider__item-text">
                                 <span><strong>Марк</strong></span>
                                 <p>Майбутнім управлінцям неабияк пощастило - адже з ними ділитиметься досвідом управлінець із величезним досвідом! Марк
                                     Левандовський, висловив бажання бути викладачем на курсах проект-менеджменту.</p>
@@ -210,9 +210,9 @@
                                     пропустите? Записуйтесь уже зараз!</p>
                             </div>
                         </div>
-                        <div class="photo">
+                        <div class="slider__item">
                             <img src="img/vova.png" alt="mentor">
-                            <div class="text">
+                            <div class="slider__item-text">
                                 <span><strong>Вова</strong></span>
                                 <p>Майбутнім управлінцям неабияк пощастило - адже з ними ділитиметься досвідом управлінець із величезним досвідом! Вова, висловив бажання бути викладачем на курсах менеджменту.</p>
                                 <p>Вові є про що розповісти. Він знає все про створення та керування великими компаніями, ефективну комунікацію, успішні проекти і багато іншого. При цьому він ніколи не скаже, що знає все - саморозвиток для нього не закінчується жодної хвилини.</p>
@@ -225,44 +225,52 @@
                     </div>
                 </div>
             </section>
-            <section class="maps">
+            <section class="maps__container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5052.452413393644!2d25.319160048042136!3d50.7157424172796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4725997e35f529e9%3A0xeba249b67a64b0a9!2sInternetDevels!5e0!3m2!1sru!2sua!4v1687785954436!5m2!1sru!2sua" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
-            <section class="cta">
-                <div class="for_cta container">
-                    <div class="items">
+            <section class="cta__container">
+                <div class="cta__block container">
+                    <div class="cta__items">
                         <a href="#" title="tel">
                             <img src="img/tel.png" alt="tel" class="tel">
                         </a>
                         <h5>Телефон</h5>
-                        <p>+38 067 332 17 55</p>
+                        <a href="tel:+38 067 332 17 55">
+                            <p>+38 067 332 17 55</p>
+                        </a>
                     </div>
-                    <div class="items">
+                    <div class="cta__items">
                         <a href="#" title="email">
                             <img src="img/email.png" alt="email" class="email">
                         </a>
                         <h5>E-mail</h5>
-                        <p>office@it.volyn.ua</p>
+                        <a href="mailto:office@it.volyn.ua">
+                            <p>office@it.volyn.ua</p>
+                        </a>
                     </div>
-                    <div class="items">
+                    <div class="cta__items">
                         <a href="#" title="location">
                             <img src="img/location.png" alt="location" class="location">
                         </a>
                         <h5>Адреса</h5>
+                        <a href="geo:https://www.google.com/maps">
                         <p>вул. Боженка 34г, Луцьк</p>
+                        </a>
                     </div>
-                    <div class="items">
+                    <div class="cta__items">
                         <a href="#" title="facebook">
                             <img src="img/facebook.png" alt="facebook" class="facebook">
                         </a>
                         <h5>Facebook</h5>
-                        <p>facebook.com/oxitschool</p>
+                        <a href="https://www.facebook.com">
+                            <p>facebook.com/oxitschool</p>
+                        </a>
                     </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
-            <div class="for_footer container">
+            <div class="footer__container container">
                     <span>&copy; Copyright 2018-2020 Internet Devels</span>
                 <a href="#">
                     <p>Умови політики конфіденційності</p>

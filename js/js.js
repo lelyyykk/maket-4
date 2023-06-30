@@ -4,8 +4,8 @@
     ========================================
 */
 document.addEventListener("DOMContentLoaded", function() {
-    const burgerMenu = document.querySelector(".burger-menu");
-    const menu = document.querySelector(".menu");
+    const burgerMenu = document.querySelector(".header__burger-menu");
+    const menu = document.querySelector("ul");
 
     burgerMenu.addEventListener("click", function() {
         menu.parentElement.classList.toggle("show");
@@ -96,7 +96,7 @@ function validateForm() {
 */
 
 $(document).ready(function() {
-    $('.slider_course').slick({
+    $('.slider-course').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
@@ -114,7 +114,8 @@ $(document).ready(function() {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    fade:true
                 }
             }
         ]
@@ -123,11 +124,11 @@ $(document).ready(function() {
 
 /*
     ========================================
-    Slider for reviews
+    Slider for reviews mentors
     ========================================
 */
 $(document).ready(function() {
-    $('.reviews_slider').slick({
+    $('.reviews_slider, .slider__mentors').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
@@ -135,21 +136,6 @@ $(document).ready(function() {
         autoplay: true,
         autoplaySpeed: 10000,
         cssEase: 'linear',
-    });
-});
-/*
-    ========================================
-    Slider for mentors
-    ========================================
-*/
-$(document).ready(function() {
-    $('.slider__mentors').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 10000,
-        cssEase: 'linear',
+        fade: true
     });
 });

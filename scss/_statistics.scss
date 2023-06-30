@@ -1,15 +1,16 @@
+@import "variables";
 .statistics__container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #3498db;
+  background-color: $blue-color;
   height: 269px;
-  .for_statistics {
+  .statistics__block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0 50px;
   }
-  .box {
+  .statistics__icon {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,11 +40,11 @@
   .statistics__container {
     display: flex;
     height: 315px;
-    .for_statistics {
+    .statistics__block {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-    .box {
+    .statistics__icon {
       display: flex;
       margin: 2px 20px;
       h4 {
