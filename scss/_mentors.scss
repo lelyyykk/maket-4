@@ -59,9 +59,7 @@
         .slider__item {
           display: flex;
           flex-direction: column;
-          img {
-            max-width: 150px;
-          }
+
           .slider__item-text {
 
             span {
@@ -72,6 +70,35 @@
               text-align: center;
             }
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .mentors__container {
+    .mentors__block {
+      .slider__mentors {
+        .slider__item {
+          .slider__item-text {
+
+            p {
+              width: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .mentors__container {
+    .mentors__block {
+      .slider__mentors {
+        .slider__item {
+          img {
+           max-width: 250px;
+         }
         }
       }
     }
