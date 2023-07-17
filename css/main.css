@@ -522,6 +522,7 @@ textarea.error::placeholder {
   .registration__container .registration__info form input {
     width: 294px;
     align-self: inherit;
+    padding: 0;
   }
   .registration__container .registration__info form input p {
     font-size: 13px;
