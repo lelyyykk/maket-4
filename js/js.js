@@ -26,69 +26,90 @@ document.addEventListener("DOMContentLoaded", function() {
     Validation
     ========================================
 */
-// Отримати посилання на форму
-var form = document.querySelector('form');
+$(document).ready(function() {
+    // Form validation
+    $("form").submit(function(event) {
+        event.preventDefault();
 
-// Додати обробник події 'submit' до форми
-form.addEventListener('submit', function(event) {
-    // Перевірка валідації перед відправкою форми
-    if (!validateForm()) {
-        event.preventDefault(); // Скасувати стандартну відправку форми, якщо валідація не пройдена
-    }
+        var form = $(this);
+        var inputs = form.find("input[type='text'], input[type='tel'], input[type='email']");
+        var isValid = true;
+
+        inputs.each(function() {
+            var input = $(this);
+            var errorContainer = input.siblings(".error-message");
+            var errorMessage = "Це поле обов'язкове";
+            var fieldType = input.attr("type");
+
+            if (input.val().trim() === "") {
+                input.addClass("error");
+                input.attr("placeholder", errorMessage);
+                isValid = false;
+            } else {
+                if (fieldType === "text" && !/^[a-zA-Zа-яА-ЯіїєІЇЄґҐ']{2,}$/.test(input.val())) {
+                    if (input.attr("name") === "surname") {
+                        errorMessage = "Введіть коректне прізвище";
+                    }
+                    input.addClass("error");
+                    input.val("");
+                    input.attr("placeholder", errorMessage);
+                    isValid = false;
+                } else if (fieldType === "tel" && !/^[\d-()+ ]{10,}$/.test(input.val())) {
+                    input.addClass("error");
+                    input.val("");
+                    input.attr("placeholder", "Введіть коректний номер телефону.");
+                    isValid = false;
+                } else if (fieldType === "email" && (!/^.{15,}$/.test(input.val()) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.val()))) {
+                    input.addClass("error");
+                    input.val("");
+                    input.attr("placeholder", "Введіть коректну адресу електронної пошти.");
+                    isValid = false;
+                } else {
+                    input.removeClass("error");
+                }
+            }
+        });
+
+        var checkbox = form.find("input[type='checkbox']");
+        if (!checkbox.prop("checked")) {
+            var errorMessage = "Будь ласка, погодьтесь з Політикою Конфіденційності.";
+            checkbox.siblings("span").addClass("error");
+            checkbox.siblings("a").addClass("error");
+            checkbox.siblings("a").attr("data-error", errorMessage);
+            isValid = false;
+        } else {
+            checkbox.removeClass("error");
+            checkbox.siblings("span").removeClass("error");
+            checkbox.siblings("a").removeClass("error");
+            checkbox.siblings("a").removeAttr("data-error");
+        }
+
+        var interest = form.find("input[name='interest']");
+        var interestValue = interest.val().trim().toLowerCase();
+        if (interestValue !== "developer" && interestValue !== "qa") {
+            var errorMessage = "Будь ласка, введіть 'developer' або 'QA'.";
+            interest.addClass("error");
+            interest.val("");
+            interest.attr("placeholder", errorMessage);
+            isValid = false;
+        } else {
+            interest.removeClass("error");
+        }
+
+        if (isValid) {
+            form[0].reset();
+
+            // Reset placeholders
+            inputs.each(function() {
+                var input = $(this);
+                input.removeClass("error");
+                input.attr("placeholder", input.attr("title"));
+            });
+        }
+    });
 });
 
-// Функція для валідації форми
-function validateForm() {
-    // Отримати значення полів форми
-    var nameInput = document.querySelector('input[name="name"]');
-    var surnameInput = document.querySelector('input[name="surname"]');
-    var phoneInput = document.querySelector('input[name="phone"]');
-    var interestInput = document.querySelector('input[name="interest"]');
-    var checkboxInput = document.querySelector('input[name="car"]');
 
-    // Перевірка валідації для кожного поля
-
-    // 1) Перевірка валідації для полів ім'я та прізвище
-    var name = nameInput.value;
-    var surname = surnameInput.value;
-    var nameRegex = /^[a-zA-Zа-яА-ЯёЁіІїЇєЄ'`]+$/; // Регулярний вираз для перевірки, що в полі можуть бути тільки букви
-
-    if (!nameRegex.test(name)) {
-        alert('Будь ласка, введіть дійсне ім\'я.');
-        return false;
-    }
-
-    if (!nameRegex.test(surname)) {
-        alert('Будь ласка, введіть дійсне прізвище.');
-        return false;
-    }
-
-    // 2) Перевірка валідації для поля з номером
-    var phone = phoneInput.value;
-    var phoneRegex = /^\d{12}$/; // Регулярний вираз для перевірки, що в полі можуть бути тільки 12 цифр
-
-    if (!phoneRegex.test(phone)) {
-        alert('Будь ласка, введіть дійсний номер телефону (12 цифр).');
-        return false;
-    }
-
-    // 3) Перевірка валідації для поля "Мене більше цікавить"
-    var interest = interestInput.value;
-    var validInterests = ['developer', 'QA'];
-
-    if (validInterests.indexOf(interest) === -1) {
-        alert('Будь ласка, введіть "developer" або "QA".');
-        return false;
-    }
-
-    // 4) Перевірка валідації для поля checkbox
-    if (!checkboxInput.checked) {
-        alert('Будь ласка, погодьтесь з Політикою Конфіденційності.');
-        return false;
-    }
-
-    return true; // Повертаємо true, якщо всі перевірки успішні
-}
 /*
     ========================================
     Slider for course
