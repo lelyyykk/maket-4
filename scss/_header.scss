@@ -39,6 +39,9 @@
           color: $text-color;
           a {
             font-size: 15px;
+            &:hover {
+              color: $blue-color;
+            }
           }
           &:last-child a {
             transform: translate(-50%, -50%);
