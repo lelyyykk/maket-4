@@ -569,27 +569,27 @@ textarea.error::placeholder {
   color: #666666;
   font-weight: lighter;
   border-bottom: 1px solid #3498db;
-  font-size: 26px;
+  font-size: 23px;
 }
 .course__container .slider-course .slider__item:nth-child(1) h3 {
-  width: 365px;
+  width: 357px;
 }
 .course__container .slider-course .slider__item:nth-child(2) h3 {
-  width: 335px;
+  width: 336px;
 }
 .course__container .slider-course .slider__item:nth-child(3) h3 {
-  width: 360px;
+  width: 362px;
 }
 .course__container .slider-course .slider__item p {
   color: rgba(102, 102, 102, 0.4666666667);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
 }
 .course__container .slider-course .slider__item:nth-child(1) p {
-  width: 350px;
+  width: 390px;
 }
 .course__container .slider-course .slider__item:nth-child(2) p {
-  width: 356px;
+  width: 369px;
 }
 .course__container .slider-course .slider__item:nth-child(3) p {
   width: 400px;
