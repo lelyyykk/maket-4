@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     font-weight: 540;
-    font-size: 30px;
+    font-size: 35px;
   }
   .slider-course {
     .slider__item {
@@ -19,40 +19,42 @@
       align-items: center;
       margin: 20px;
       img {
-        height: 70px;
-        width: 70px;
+        height: 83px;
+        width: 83px;
       }
       h3 {
         display: inline-block;
-        height: 40px;
+        height: 46px;
         color: #666666;
         font-weight: lighter;
         border-bottom: 1px solid $blue-color;
-        font-size: 22px;
+        font-size: 26px;
       }
       &:nth-child(1) h3 {
-        width: 309px;
+        width: 365px;
       }
 
       &:nth-child(2) h3 {
-        width: 284px;
+        width: 335px;
       }
 
       &:nth-child(3) h3 {
-        width: 305px;
+        width: 360px;
       }
       p {
-        color: $text-color;
-        font-size: 16px;
+        color: #6667;
+        font-size: 18px;
+        line-height: 24px;
+
       }
       &:nth-child(1) p {
-        width: 302px;
+        width: 350px;
       }
       &:nth-child(2) p {
-        width: 295px;
+        width: 356px;
       }
       &:nth-child(3) p {
-        width: 292px;
+        width: 400px;
       }
     }
     .slick-dots {
